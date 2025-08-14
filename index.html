@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullfrog - $BFG</title>
+    <link rel="icon" href="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        :root {
+            --primary-color: #66a400;
+            --secondary-color: #83bb61;
+            --dark-color: #181913;
+            --light-color: #c2bfba;
+            --background-start-color: #2c2d25;
+            --background-end-color: #5a5b4a;
+        }
+
+        body {
+            font-family: 'Sora', sans-serif;
+            color: var(--light-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            background: linear-gradient(45deg, var(--background-start-color), var(--background-end-color));
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            overflow: hidden; /* Prevents scrollbars during animation */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgba(24, 25, 19, 0.85);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- Animation Classes --- */
+        .animate-on-load {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-load.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1.1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1.1); }
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+        }
+
+        .symbol {
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 2.5em;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            text-shadow: 0 0 15px var(--secondary-color);
+        }
+
+        .social-links .material-icons,
+        .social-links .bi-twitter-x {
+            vertical-align: middle;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover .material-icons,
+        .social-links a:hover .bi-twitter-x {
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png" alt="Bullfrog Logo" class="logo animate-on-load">
+        <h1 class="animate-on-load">Bullfrog</h1>
+        <div class="symbol animate-on-load">$BFG</div>
+        <p class="animate-on-load">
+            BullFrog 🐸 $BFG – Not just a meme token, it’s a frog revolution! Jump in or get left behind. 🚀💦
+        </p>
+        <div class="social-links animate-on-load">
+            <a href="https://t.me/bullfrogmeme" target="_blank" title="Telegram">
+                <i class="material-icons">telegram</i>
+            </a>
+            <a href="https://x.com/BFG_community?t=uiIep9taQArprrxchxcZZA&s=09" target="_blank" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-load');
+            
+            elementsToAnimate.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 200); // Stagger the animation
+            });
+
+            console.log('Bullfrog website loaded with professional animations!');
+        });
+    </script>
+</body>
+  </html>
