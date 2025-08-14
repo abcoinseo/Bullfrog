@@ -3,110 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bullfrog - $BFG</title>
-    <link rel="icon" href="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- SEO Meta Tags -->
+    <title>Bull Frog ($BFG) - The Frog Revolution</title>
+    <meta name="description" content="BullFrog 🐸 $BFG – Not just a meme token, it’s a frog revolution! Jump in or get left behind. 🚀💦 1 Billion supply. Join the community!">
+    <meta name="keywords" content="Bull Frog, $BFG, BFG, Meme Coin, Crypto, Cryptocurrency, Frog Token, Crypto Revolution, Blockchain">
+    <meta name="author" content="Bull Frog Community">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Favicon / Icon Card -->
+    <link rel="icon" href="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png">
+
     <style>
+        /* CSS Styling */
         :root {
-            --primary-color: #66a400;
-            --secondary-color: #83bb61;
-            --dark-color: #181913;
-            --light-color: #c2bfba;
-            --background-start-color: #2c2d25;
-            --background-end-color: #5a5b4a;
+            --primary-color: #2ecc71; /* Green */
+            --secondary-color: #27ae60;
+            --background-color: #1a1a1a;
+            --text-color: #ecf0f1;
+            --card-bg-color: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Sora', sans-serif;
-            color: var(--light-color);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            background: linear-gradient(45deg, var(--background-start-color), var(--background-end-color));
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            overflow: hidden; /* Prevents scrollbars during animation */
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 600px;
-            padding: 40px;
-            border-radius: 15px;
-            background-color: rgba(24, 25, 19, 0.85);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
         }
 
-        /* --- Animation Classes --- */
-        .animate-on-load {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        /* Header */
+        header {
+            background: var(--background-color);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--card-bg-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
-        .animate-on-load.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        /* Hero Section */
+        #hero {
+            padding-top: 140px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #2c2c2c, #1a1a1a);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero-content .icon {
             width: 150px;
             height: 150px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
         }
 
-        .logo:hover {
-            transform: scale(1.1);
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1.1); }
-            50% { transform: scale(1.15); }
-            100% { transform: scale(1.1); }
-        }
-
-        h1 {
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
             color: var(--primary-color);
-            font-size: 3em;
-            margin: 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+        }
+        
+        .hero-content h1 span {
+            color: var(--text-color);
         }
 
-        .symbol {
-            color: var(--secondary-color);
-            font-size: 1.5em;
-            margin-bottom: 20px;
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 30px;
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin: 0.5rem;
         }
 
-        .social-links a {
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: var(--card-bg-color);
+        }
+        
+        .btn-secondary:hover {
+            background: #3c3c3c;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--card-bg-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Tokenomics Section */
+        .tokenomics-card {
+            background: var(--card-bg-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+        }
+
+        .tokenomics-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .tokenomics-card p {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Community Section */
+        .community-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .community-link {
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            background: var(--card-bg-color);
+            border-radius: 10px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .community-link i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        .community-link:hover {
+            transform: translateY(-5px);
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+        
+        footer a {
             color: var(--primary-color);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 2.5em;
-            transition: color 0.3s, text-shadow 0.3s;
         }
 
-        .social-links a:hover {
-            color: var(--secondary-color);
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--background-color);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: right 0.4s ease-in-out;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+                color: var(--text-color);
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png" alt="Bull Frog Logo">
+                <span>Bull Frog</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#" class="btn">Buy $BFG</a></li>
+            </ul>
+            <i class="material-icons hamburger" id="hamburger">menu</i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <img src="https://i.postimg.cc/j2jRSnPS/1000054624-removebg-preview.png" alt="Bull Frog Icon" class="icon">
+            <h1><span>Welcome to</span> BullFrog 🐸</h1>
+            <p>$BFG – Not just a meme token, it’s a frog revolution! Jump in or get left behind. 🚀💦</p>
+            <div>
+                <a href="#community" class="btn">Join Community</a>
+                <a href="#" class="btn btn-secondary">How to Buy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">The Frog Revolution</h2>
+            <p>BullFrog ($BFG) isn't your average meme coin. It's a movement born from the swamp, ready to leap to the moon. We are a community-driven project aiming to create a fun, engaging, and powerful presence in the crypto world. Tired of the same old dog and cat coins? It's time for the frog to reign supreme. Join our army and be part of the revolution!</p>
+        </div>
+    </section>
+    
+    <!-- Tokenomics Section -->
+    <section id="tokenomics">
+        <div class="container">
+            <h2 class="section-title">Tokenomics</h2>
+            <div class="tokenomics-card">
+                <h3>Total Supply</h3>
+                <p>1,000,000,000</p>
+                <span>$BFG</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community">
+        <div class="container">
+            <h2 class="section-title">Join the Pond</h2>
+            <div class="community-links">
+                <a href="https://t.me/bullfrogmeme" target="_blank" class="community-link">
+                    <i class="material-icons">telegram</i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://x.com/BFG_community?t=uiIep9taQArprrxchxcZZA&s=09" target="_blank" class="community-link">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 10px;">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </svg>
+                    <span>X (Twitter)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bull Frog ($BFG). All Rights Reserved.</p>
+            <p>Built for the frog revolution by the <a href="https://t.me/bullfrogmeme" target="_blank">BFG Community</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Change icon based on state
+            if (navLinks.classList.contains('active')) {
+                hamburger.textContent = 'close';
+            } else {
+                hamburger.textContent = 'menu';
+            }
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if(navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.textContent = 'menu';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>```            color: var(--secondary-color);
             text-shadow: 0 0 15px var(--secondary-color);
         }
 
